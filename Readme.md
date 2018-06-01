@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Артем Веселов](https://up.htmlacademy.ru/javascript/14/user/614383).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Смирнов](https://htmlacademy.ru/profile/id516117).
 
 ---
 
