@@ -5,10 +5,6 @@ var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var GAP_SHADOW = 10;
-var GAP_BAR = 90;
-var barWidth = 40;
-var barHeight = 150;
-var firstChanelColor = 0;
 var secondChanelColor = 0;
 var thirdChanelColor = 250;
 
@@ -47,15 +43,15 @@ window.renderStatistics = function (ctx, names, times) {
   var maxTime = getMaxElement(times);
 
   var getSelectColor = function () {
-    var colorBar = 'rgba(' + firstChanelColor + ', ' + secondChanelColor + ', ' + thirdChanelColor + ', ' + Math.random() + ')';
+    var colorBar = 'rgba(' + 0 + ', ' + secondChanelColor + ', ' + thirdChanelColor + ', ' + Math.random() + ')';
     return names[i] === 'Вы'
       ? 'red'
       : colorBar;
   };
 
   for (var i = 0; i < names.length; i++) {
-    renderText(ctx, names[i], (CLOUD_X * i) + GAP_BAR + barWidth, CLOUD_HEIGHT, '#000');
-    renderText(ctx, Math.round(times[i]), (CLOUD_X * i) + GAP_BAR + barWidth, CLOUD_Y + CLOUD_Y + (GAP_BAR - GAP_SHADOW - GAP_SHADOW) + (barHeight - ((barHeight * times[i]) / maxTime)), '#000');
-    renderBar(ctx, (CLOUD_X * i) + GAP_BAR + barWidth, CLOUD_Y + GAP_BAR + (barHeight - ((barHeight * times[i]) / maxTime)), barWidth, (barHeight * times[i]) / maxTime, getSelectColor());
+    renderText(ctx, names[i], (CLOUD_X * i) + 90 + 40, CLOUD_HEIGHT, '#000');
+    renderText(ctx, Math.round(times[i]), (CLOUD_X * i) + 90 + 40, CLOUD_Y + CLOUD_Y + (90 - GAP_SHADOW - GAP_SHADOW) + (150 - ((150 * times[i]) / maxTime)), '#000');
+    renderBar(ctx, (CLOUD_X * i) + 90 + 40, CLOUD_Y + 90 + (150 - ((150 * times[i]) / maxTime)), 40, (150 * times[i]) / maxTime, getSelectColor());
   }
 };
