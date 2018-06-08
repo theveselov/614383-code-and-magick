@@ -5,8 +5,6 @@ var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var GAP_SHADOW = 10;
-var secondChanelColor = 0;
-var thirdChanelColor = 250;
 
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
@@ -43,7 +41,7 @@ window.renderStatistics = function (ctx, names, times) {
   var maxTime = getMaxElement(times);
 
   var getSelectColor = function () {
-    var colorBar = 'rgba(' + 0 + ', ' + secondChanelColor + ', ' + thirdChanelColor + ', ' + Math.random() + ')';
+    var colorBar = 'rgba(' + 0 + ', ' + 0 + ', ' + 250 + ', ' + Math.random() + ')';
     return names[i] === 'Вы'
       ? 'red'
       : colorBar;
