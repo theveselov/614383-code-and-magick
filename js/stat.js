@@ -56,4 +56,4 @@ window.renderStatistics = function (ctx, names, times) {
     renderText(ctx, Math.round(times[i]), (CLOUD_X * i) + GAP_BAR + barWidth, CLOUD_Y + CLOUD_Y + (GAP_BAR - GAP_SHADOW - GAP_SHADOW) + (barHeight - ((barHeight * times[i]) / maxTime)), '#000');
     renderBar(ctx, (CLOUD_X * i) + GAP_BAR + barWidth, CLOUD_Y + GAP_BAR + (barHeight - ((barHeight * times[i]) / maxTime)), barWidth, (barHeight * times[i]) / maxTime, getSelectColor(names[i]));
   }
-}; 
+};
